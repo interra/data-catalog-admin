@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Sidebar from './components/Sidebar';
-import mock from './assets/images/analytics-mock.png';
 import {Link} from 'react-router-dom';
 
 class Home extends Component {
@@ -43,7 +42,6 @@ class Home extends Component {
                       </div>
                     </div>
                   </div>
-                  <img style={{width: "70%"}} src={mock} />
 
           </main>
         </div>
