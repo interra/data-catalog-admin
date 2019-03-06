@@ -1,0 +1,52 @@
+{
+  "name": "interra-catalog-adming",
+  "version": "0.1.0",
+  "homepage": "https://interra.github.io/catalog-admin",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "bootstrap": "^4.3.0",
+    "data.js": "^0.11.5",
+    "dom-confetti": "^0.1.0",
+    "filesize": "^4.1.2",
+    "i": "^0.3.6",
+    "lodash": "^4.17.11",
+    "npm": "^6.8.0",
+    "papaparse": "^4.6.3",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-dom-confetti": "^0.1.0",
+    "react-jsonschema-form": "^1.2.1",
+    "react-loader": "^2.4.5",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.4",
+    "react-table": "^6.9.2",
+    "stream": "0.0.2",
+    "styled-components": "^4.1.3",
+    "tableschema": "^1.9.1",
+    "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
