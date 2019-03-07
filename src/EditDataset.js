@@ -21,26 +21,22 @@ class EditDataset extends Component {
         <div class="row h-100">
           <Sidebar className="col-12 col-md-2 p-0" />
           <main className="col bg-faded py-3">
-
-        <h1>Detail</h1>
-        <p className="lead">Time to add metadata.</p>
-
+            <h1>Detail</h1>
+            <p className="lead">Time to add metadata.</p>
             <div>
-                  <div>
-										<Form schema={dataset}
-											formData={metadata}
-											uiSchema={uiSchema.dataset}
-											onSubmit={log("submitted")}
-											onError={log("errors")}>
-											<br/>
-										</Form>
-									</div>
-
-            </div>
-
-                </main>
+              <div>
+                <Form schema={dataset}
+                  formData={metadata}
+                  uiSchema={uiSchema.dataset}
+                  onSubmit={log("submitted")}
+                  onError={log("errors")}>
+                  <br/>
+                </Form>
               </div>
             </div>
+          </main>
+        </div>
+      </div>
     );
   }
 }

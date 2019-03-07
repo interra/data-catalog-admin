@@ -24,9 +24,9 @@ class Datasets extends Component {
       Header: 'Edit',
       accessor: 'interra.id',
       Cell: props => (
-        <Link className="scenarioDetailLink"
+        <Link className='scenarioDetailLink'
             to={`/dataset/${props.value}`}
-            id="hey">edit</Link>
+            id='edit'>edit</Link>
           )
     }
   ]
@@ -42,11 +42,11 @@ class Datasets extends Component {
                 <>
                 {datasets ? (
                   <div>
-										 <ReactTable
-											data={datasets}
+                     <ReactTable
+                      data={datasets}
                       showPageSizeOptions={false}
-											defaultPageSize={10}
-											columns={columns} />
+                      defaultPageSize={10}
+                      columns={columns} />
                     </div>
                 ) :    (
                   <Loader />

@@ -28,7 +28,7 @@ class Add extends Component {
                       <>
                       { step === "preview" ? (
                         <>
-      										<Redirect to="/add/preview"/>
+                          <Redirect to="/add/preview"/>
                         </>
                       ) :
                       (

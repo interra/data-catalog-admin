@@ -43,19 +43,19 @@ class App extends Component {
               <DatasetProvider>
               <GroupProvider>
 
-							<Header />
-								<Route exact={true} path='/' render={()=>(home)} />
-								<Route exact={true} path='/datasets' render={()=>(datasets)} />
+              <Header />
+                <Route exact={true} path='/' render={()=>(home)} />
+                <Route exact={true} path='/datasets' render={()=>(datasets)} />
                 <Route exact={true} path='/dataset/:id' render={({match})=>(<EditDataset id={match.params.id}/>)}/>
 
-								<Route exact={true} path='/groups' render={()=>(groups)} />
+                <Route exact={true} path='/groups' render={()=>(groups)} />
 
-								<Route exact={true} path='/add' render={()=>(add)} />
+                <Route exact={true} path='/add' render={()=>(add)} />
 
-								<Route exact={true} path='/add/preview' render={()=>(preview)} />
-								<Route exact={true} path='/add/schema' render={()=>(schema)} />
-								<Route exact={true} path='/add/detail' render={()=>(detail)} />
-								<Route exact={true} path='/add/publish' render={()=>(publish)} />
+                <Route exact={true} path='/add/preview' render={()=>(preview)} />
+                <Route exact={true} path='/add/schema' render={()=>(schema)} />
+                <Route exact={true} path='/add/detail' render={()=>(detail)} />
+                <Route exact={true} path='/add/publish' render={()=>(publish)} />
               </GroupProvider>
 
               </DatasetProvider>

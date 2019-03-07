@@ -26,21 +26,21 @@ class Publish extends Component {
             <div>
                 {file ? (
                   <div>
-										<Form schema={dataset}
-											formData={metadata}
-											uiSchema={uiSchema.dataset}
-											onChange={updateMetadata}
-											onSubmit={log("submitted")}
-											onError={log("errors")}>
-											<br/>
-										</Form>
-									</div>
+                    <Form schema={dataset}
+                      formData={metadata}
+                      uiSchema={uiSchema.dataset}
+                      onChange={updateMetadata}
+                      onSubmit={log("submitted")}
+                      onError={log("errors")}>
+                      <br/>
+                    </Form>
+                  </div>
                 ) : (
                   <Redirect to="/"/>
                 )}
             </div>
           )}
-        </FileConsumer>	<Pager />
+        </FileConsumer> <Pager />
 
                 </main>
               </div>
