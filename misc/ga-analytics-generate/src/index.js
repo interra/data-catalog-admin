@@ -97,6 +97,17 @@ const lastYear = query({
     "expression":"ga:users"
   }]
 });
+
+const allTime = query({
+  viewId,
+  "dateRanges": [{ 
+		'startDate': "2012-01-01",
+		'endDate': moment(now).date(1).month(0).subtract(1, 'day').format('YYYY-MM-DD')
+  }],
+  "metrics":[{
+    "expression":"ga:pageViews"
+  }]
+});
  
 function query(request) {
   const req = {
@@ -121,16 +132,18 @@ function query(request) {
   });
 }
 
-Promise.all([thisWeek, lastWeek, thisYear, lastYear]).then((results) => {
+Promise.all([thisWeek, lastWeek, thisYear, lastYear, allTime]).then((results) => {
   const thisWeek = results[0].data.reports[0].data.rows.map((row) => { return +row.metrics[0].values; });
   const lastWeek = results[1].data.reports[0].data.rows.map((row) => { return +row.metrics[0].values; });
   const thisYear = results[2].data.reports[0].data.rows.map((row) => { return +row.metrics[0].values; });
   const lastYear = results[3].data.reports[0].data.rows.map((row) => { return +row.metrics[0].values; });
+  const allTime = results[4].data.reports[0].data.rows.map((row) => { return +row.metrics[0].values; });
   const data = {
     thisWeek,
     lastWeek,
     thisYear,
-    lastYear
+    lastYear,
+    allTime
   }
   fs.writeFileSync('analytics.json', JSON.stringify(data, null, 2));  
 });
