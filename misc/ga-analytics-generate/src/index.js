@@ -97,12 +97,12 @@ const lastYear = query({
     "expression":"ga:users"
   }]
 });
-
+const today = moment(now).date(1).format('YYYY-MM-DD');
 const allTime = query({
   viewId,
   "dateRanges": [{ 
 		'startDate': "2012-01-01",
-		'endDate': moment(now).date(1).month(0).subtract(1, 'day').format('YYYY-MM-DD')
+		'endDate': today
   }],
   "metrics":[{
     "expression":"ga:pageViews"
