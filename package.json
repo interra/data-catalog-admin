@@ -8,6 +8,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.0",
+    "chart.js": "^2.7.3",
     "data.js": "^0.11.5",
     "dom-confetti": "^0.1.0",
     "filesize": "^4.1.2",
@@ -16,10 +17,12 @@
     "npm": "^6.8.0",
     "papaparse": "^4.6.3",
     "react": "^16.8.1",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.8.1",
     "react-dom-confetti": "^0.1.0",
     "react-jsonschema-form": "^1.2.1",
     "react-loader": "^2.4.5",
+    "react-number-format": "^4.0.6",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.4",
@@ -47,6 +50,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "faker": "^4.1.0",
+    "gh-pages": "^2.0.1",
+    "json-schema-faker": "^0.5.0-rc16"
   }
 }

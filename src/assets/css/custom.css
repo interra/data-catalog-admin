@@ -109,3 +109,24 @@ main {
 #error-container {
   margin-top: 20px;
 }
+h3, h4 {
+  color: #777;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 1.1em;
+}
+.btn-primary {
+	background-color: #1076bc;
+	border-color: #1076bc;
+}
+.btn-outline-primary:hover,
+.btn-primary:hover {
+	background-color: #88b6e6;
+}
+.btn-outline-primary {
+	color: #1076bc;
+	border-color: #1076bc;
+}

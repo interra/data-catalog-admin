@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Comment",
+  "description": "A comment that has been applied to an entity like a dataset.",
+  "type": "object",
+  "required": [
+    "title",
+    "created",
+    "modified",
+    "body",
+    "identifier"
+  ],
+  "properties": {
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "parent": {
+      "title": "parent",
+      "type": "string",
+      "faker": "random.uuid"
+    },
+    "identifier": {
+      "type": "string",
+      "title": "Identifier",
+      "faker": "random.uuid"
+    },
+    "created": {
+      "type": "string",
+      "title": "Created",
+      "format": "date-time"
+    },
+    "modified": {
+      "type": "string",
+      "title": "Modified",
+      "format": "date-time"
+    },
+    "body": {
+      "type": "string",
+      "title": "body",
+      "faker": "lorem.sentences"
+    }
+  }
+}
