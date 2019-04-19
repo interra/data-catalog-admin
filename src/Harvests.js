@@ -1,31 +1,40 @@
 import React, { Component } from 'react';
-import { DatasetConsumer } from './context/DatasetContext';
+import { HarvestConsumer } from './context/HarvestContext';
 import Sidebar from './components/Sidebar';
 import Loader from 'react-loader';
 import ReactTable from 'react-table';
 import { Link } from 'react-router-dom';
 
-class Datasets extends Component {
+class Harvests extends Component {
 
   render() {
     const columns = [{
       Header: 'Title',
-      accessor: 'title'
+      accessor: 'sourceId'
     },
     {
-      Header: 'Modified',
-      accessor: 'modified'
+      Header: 'Type',
+      accessor: 'source.type'
     },
     {
-      Header: 'Description',
-      accessor: 'description'
+      Header: 'URL',
+      accessor: 'source.uri'
+    },
+    {
+      Header: 'View',
+      accessor: 'sourceId',
+      Cell: props => (
+        <Link className='scenarioDetailLink'
+            to={`/harvest/${props.value}`}
+            id='view'>view</Link>
+          )
     },
     {
       Header: 'Edit',
-      accessor: 'interra.id',
+      accessor: 'sourceId',
       Cell: props => (
-        <Link className='scenarioDetailLink'
-            to={`/dataset/${props.value}`}
+        <Link 
+            to={`/harvest/${props.value}/edit`}
             id='edit'>edit</Link>
           )
     }
@@ -36,20 +45,20 @@ class Datasets extends Component {
         <div className="row h-100">
           <Sidebar className="col-12 col-md-2 p-0" />
           <main className="col bg-faded py-3">
-            <h1>Datasets</h1>
+            <h1>Harvests</h1>
             <p>
-              <Link className="btn btn-primary" to="/add">Add Data</Link>
+              <Link className="btn btn-primary" to="/add-harvest">Add Harvest</Link>
             </p>
-            <DatasetConsumer>
+            <HarvestConsumer>
 
-              {({ datasets }) => (
+              {({ harvests }) => (
                 <>
-                {datasets ? (
+                {harvests ? (
                   <div>
                      <ReactTable
-                      data={datasets}
+                      data={harvests}
                       showPageSizeOptions={false}
-                      defaultPageSize={10}
+                      defaultPageSize={5}
                       columns={columns} />
                     </div>
                 ) :    (
@@ -57,7 +66,7 @@ class Datasets extends Component {
                 )}
                 </>
               )}
-            </DatasetConsumer>
+            </HarvestConsumer>
           </main>
         </div>
       </div>
@@ -65,4 +74,4 @@ class Datasets extends Component {
   }
 }
 
-export default Datasets;
+export default Harvests;

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router'
 import dataset from './schemas/simple/dataset.json';
 import uiSchema from './schemas/simple/UISchema.json';
 import Form from "react-jsonschema-form";
 import Sidebar from './components/Sidebar';
-import Pager from './components/Pager';
 
 const log = (type) => console.log.bind(console, type);
 

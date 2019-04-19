@@ -1,0 +1,36 @@
+{
+	"title": "Harvest",
+	"description": "Pull in data from remote catalogs.",
+	"type": "object",
+	"required": ["id", "source", "type"],
+	"properties": {
+		"id": {
+			"type": "string",
+			"title": "ID",
+			"description": "Unique id for the source",
+			"pattern": "^[a-zA-Z0-9]*$"
+		},
+		"source": {
+			"type": "string",
+			"title": "Remote source",
+			"pattern": "^http://|^https://|^file://"
+		},
+		"type": {
+			"type": "string",
+			"title": "Type of source",
+			"enum": ["DataJSON", "Test", "CKAN"]
+		},
+		"excludes": {
+			"type": "object",
+			"title": "Exclude"
+		},
+		"defaults": {
+			"type": "object",
+			"title": "Defaults"
+		},
+		"overrides": {
+			"type": "object",
+			"title": "Overrides"
+		}
+	}
+}

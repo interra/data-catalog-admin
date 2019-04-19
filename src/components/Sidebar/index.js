@@ -7,6 +7,7 @@ import { faLockOpen } from '@fortawesome/free-solid-svg-icons'
 import { faPeopleCarry } from '@fortawesome/free-solid-svg-icons'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import { faAnchor } from '@fortawesome/free-solid-svg-icons'
+import { faComments } from '@fortawesome/free-solid-svg-icons'
 
 
 class Sidebar extends React.Component {
@@ -27,13 +28,16 @@ class Sidebar extends React.Component {
                   <Link className="nav-link pl-0" to="/groups"><FontAwesomeIcon icon={faPeopleCarry} />  Groups</Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link pl-0" to="/comments"><FontAwesomeIcon icon={faComments} />  Comments</Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link pl-0" to="/add"><FontAwesomeIcon icon={faPlusCircle} />  Add Data</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pl-0" href="#"><FontAwesomeIcon icon={faAnchor} />  Harvests</a>
+                  <Link className="nav-link pl-0" to="/harvests"><FontAwesomeIcon icon={faAnchor} />  Harvests</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pl-0" href="#"><FontAwesomeIcon icon={faLockOpen} />  Settings</a>
+                  <Link className="nav-link pl-0" to="/settings"><FontAwesomeIcon icon={faLockOpen} />  Settings</Link>
                 </li>
               </ul>
             </div>

@@ -130,3 +130,27 @@ h4 {
 	color: #1076bc;
 	border-color: #1076bc;
 }
+.search-list-item .label {
+  margin: 0 5px 0 0;
+  font-size: .9em;
+  padding: 0px 6px;
+}
+.search-list-item h2 {
+  font-size: 1.5em
+}
+.search-list-item .item-theme {
+  margin: 0 0 10px 0;
+}
+.search-list-item {
+  padding: 15px;
+}
+.label[data-format="zip"] {
+  background-color: #000 !important;
+}
+body .form-control {
+  font-size: 1em;
+  margin: 0;
+}
+.dataset-preview {
+  display: relative;
+}

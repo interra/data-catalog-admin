@@ -13,7 +13,7 @@ class Header extends React.Component {
               <img className="logo" alt="logo" src={logo}/>
             </Link>
             <span className="navbar-text">
-              <a href="#">Sign out</a>
+              Sign out
             </span>
           </nav>
         </Wrapper>

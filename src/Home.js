@@ -14,7 +14,6 @@ class Home extends Component {
     console.log(this.state.analytics);
     const { thisWeek, lastWeek, thisYear, lastYear } = this.state.analytics;
     const allTime = parseInt(this.state.analytics.allTime);
-    console.log(this.state);
 
     const weekData = {
       labels : [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ],
@@ -87,7 +86,7 @@ class Home extends Component {
                 </div>
                 <div className="card-body">
                   <h1 className="card-title pricing-card-title">415</h1>
-                  <button type="button" className="btn btn-lg btn-block btn-primary">manage comments</button>
+                  <Link to="/comments" className="btn btn-lg btn-block btn-primary">manage comments</Link>
                 </div>
               </div>
             </div>

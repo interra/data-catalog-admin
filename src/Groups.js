@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { GroupConsumer } from './context/GroupContext';
-import { DatasetConsumer } from './context/DatasetContext';
 import Sidebar from './components/Sidebar';
 import Loader from 'react-loader';
 import ReactTable from 'react-table';

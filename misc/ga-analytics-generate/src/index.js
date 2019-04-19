@@ -63,8 +63,8 @@ const lastWeek = query({
 const thisYear = query({
   viewId,
   "dateRanges": [{ 
-		'startDate': moment(now).date(1).month(0).format('YYYY-MM-DD'),
-		'endDate': moment(now).format('YYYY-MM-DD')
+    'startDate': moment(now).date(1).month(0).format('YYYY-MM-DD'),
+    'endDate': moment(now).format('YYYY-MM-DD')
   }],
   "dimensions": [
     {
@@ -82,8 +82,8 @@ const thisYear = query({
 const lastYear = query({
   viewId,
   "dateRanges": [{ 
-		'startDate': moment(now).subtract(1, 'year').date(1).month(0).format('YYYY-MM-DD'),
-		'endDate': moment(now).date(1).month(0).subtract(1, 'day').format('YYYY-MM-DD')
+    'startDate': moment(now).subtract(1, 'year').date(1).month(0).format('YYYY-MM-DD'),
+    'endDate': moment(now).date(1).month(0).subtract(1, 'day').format('YYYY-MM-DD')
   }],
   "dimensions": [
     {
@@ -101,8 +101,8 @@ const today = moment(now).date(1).format('YYYY-MM-DD');
 const allTime = query({
   viewId,
   "dateRanges": [{ 
-		'startDate': "2012-01-01",
-		'endDate': today
+    'startDate': "2012-01-01",
+    'endDate': today
   }],
   "metrics":[{
     "expression":"ga:pageViews"

@@ -8,9 +8,7 @@ class DatasetProvider extends React.Component {
     datasets: datasets
   }
 
-
   render() {
-    console.log(this.state.datasets);
     return (
       <DatasetContext.Provider
         value={{

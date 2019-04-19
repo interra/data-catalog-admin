@@ -4,7 +4,6 @@ import { Redirect } from 'react-router'
 import Confetti from 'react-dom-confetti';
 import Sidebar from './components/Sidebar';
 import Pager from './components/Pager';
-import Loader from 'react-loader';
 
 const slowClick = (setLoading) => () => {
   setLoading(true);
