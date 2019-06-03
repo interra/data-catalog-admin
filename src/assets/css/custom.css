@@ -9,11 +9,11 @@ input#title {
   padding-left: 0px;
 }
 main {
-	padding: 20px 15px;
+  padding: 20px 15px;
 }
 .branding img {
-	max-height: 60px;
-	padding: 0.8em 0;
+  max-height: 60px;
+  padding: 0.8em 0;
 }
 #file-name {
   float:left;
@@ -147,7 +147,7 @@ h4 {
 .label[data-format="zip"] {
   background-color: #000 !important;
 }
-body .form-control {
+body .ReactTable .form-control {
   font-size: 1em;
   margin: 0;
 }
