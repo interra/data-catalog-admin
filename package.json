@@ -16,7 +16,7 @@
     "interra-data-catalog-components": "0.0.30",
     "lodash": "^4.17.11",
     "npm": "^6.8.0",
-    "papaparse": "^4.6.3",
+    "papaparse": "^5.2.0",
     "react": "^16.8.1",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.8.1",
